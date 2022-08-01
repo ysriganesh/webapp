@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+    <body>
+        <h2 align="center" style="color:blue">COMPANY NAME</h2>
+        <hr>
+        <div style="text-align: center;">
+        <a href="home.html">HOME PAGE</a>&ensp;&ensp;
+        <a href="Application.html">APPLICATION FORM</a>
+    </div>
+        <hr>
+        <form action="server.php" method="post">
+        <fieldset>
+            <legend style="text-align: center;">APPLICATION FORM</legend>
+            <table align="center">
+                <tr>
+                    <td style="color: blue;">
+                        Name:
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Enter your name" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td style="color:blue">Application Number:</td>
+                    <td><input type="text" placeholder="KU2021CSE1001" required></td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="color:blue">Password</td>
+                    <td><input type="pass" placeholder="**********" required></td>
+
+                </tr>
+                <tr>
+                    <td style="color:blue">Date:</td>
+                    <td><input type="date" placeholder="dd-mm-yyyy" required></td>
+                </tr>
+                <tr>
+                    <td style="color:blue">Age:</td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td style="color:blue">Number:</td>
+                    <td><input type="tel" placeholder="Emter Mobile Number" required></td>
+                </tr>
+                <tr>
+                    <td style="color:blue">Email:</td>
+                    <td><input type="email" placeholder="Enter Email" required></td>
+                </tr>
+                <tr>
+                    <td style="color:blue">Gender:</td>
+                    <td>
+                        <input type="radio" id="male" name="Gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="Gender" value="Female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color:blue">
+                        Address:
+                    </td>
+                    <td>
+                        <textarea name="Enter Address" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color:blue">Languages Know:</td>
+                    <td>
+                        <input type="checkbox" name="languages" id="Languages" value="English">
+                        <label for="languages">English</label>
+                        <input type="checkbox" name="languages" id="Languages" value="Tamil">
+                        <label for="languages">Tamil</label>
+                        <input type="checkbox" name="languages" id="Languages" value="Malayam">
+                        <label for="languages">Malayam</label>
+                        <input type="checkbox" name="languages" id="Languages" value="Telugu">
+                        <label for="languages">Telugu</label>
+                        <input type="checkbox" name="languages" id="Languages" value="Hindi">
+                        <label for="languages">Hindi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color:blue">Select the course:</td>
+
+                
+                
+            
+                    <td>
+                        <label for="course" id="course"></label>
+                        <select name="course" id="course">
+                        <option value="B.TECH COMPUTER SCIENCE AND ENGINEERING">B.TECH COMPUTER SCIENCE AND ENGINEERING</option>
+                        <option value="COMPUTER SCIENCE AND ENGINEERING">COMPUTER SCIENCE AND ENGINEERING</option>
+                        <option value="ELECTRONICS COMMUNICATION ENGINEERING">ELECTRONICS COMMUNICATION ENGINEERING</option>
+                        <option value="MECHNICAL ENGINEERING">MECHNICAL ENGINEERING</option>
+                        <option value="CIVIL ENGINEERING">CIVIL ENGINEERING</option>
+                        <option value="ELECTRICAL ENGINEERING">ELECTRICAL ENGINEERING</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload your photo</td>
+                    <td><input type="file" name="file" required></td>
+
+
+                </tr>
+                <td> </td>
+                <td><progress id="file" value="50" max="100"></progress>50% Uploading Completed
+                </td>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" required></td>
+                </tr>
+
+            </tr>
+
+        
+                
+                
+            </table>
+        </fieldset>
+    </form>
+    </body>
+</html>
