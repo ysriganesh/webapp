@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Car Racing Game In jQuery</title>
+   
+    <script src="https://raw.githubusercontent.com/aFarkas/html5shiv/master/src/html5shiv.js"></script>
+    <link rel="stylesheets" href="stylesheets.css">
+    <script>
+        //JavaScript Document
+$('#Go').click(function() {
+    function CheckIfComplete() {
+        if (isComplete == false) {
+            isComplete == true;
+        } else {
+            place = 'Second';
+        }
+    }
+    var CarWidth = $('#Car1').width();
+    var RaceTrackWidth = $(window).width() - CarWidth;
+    var RaceTime1 = Math.floor((Math.random() * 5000) + 1);
+    var RaceTime2 = Math.floor((Math.random() * 5000) + 1);
+    var isComplete = false;
+    var Place = 'First';
+
+    $('#Car1').animate({
+        left: RaceTrackWidth
+    }, RaceTime1, function() {
+        CheckIfComplete();
+        $('#RaceInfo1 span').text('Finished in ' + Place + ' place & Clocked in at ' + RaceTime1 + ' ms');
+    });
+
+    $('#Car2').animate({
+        left: RaceTrackWidth
+    }, RaceTime2, function() {
+        CheckIfComplete();
+        $('#RaceInfo2 span').text('Finished in ' + Place + ' place & Clocked in at ' + RaceTime2 + ' ms');
+    });
+
+    $('#Reset').click(function() {
+        $('.Car').css('left', '0');
+        $('.RaceInfo span').text("");
+    });
+
+});
+    </script>
+</head>
+
+<body id="Race">
+    <h1>jQuery Car Racer</h1>
+    <input type="button" value="Race!" id="Go">
+    <input type="button" value="Reset" id="Reset">
+
+    <div id="RaceTrack">
+        <img width="15%" id="Car1" class="Car" src="https://n3.sdlcdn.com/imgs/j/q/e/Model-Sports-Remote-Control-Car-SDL914062874-1-1a98d.jpeg" alt="Green Car">
+        <img width="15%" id="Car2" class="Car" src="https://thumbs.dreamstime.com/z/real-life-models-toy-car-red-color-white-background-side-view-toy-cars-red-color-white-background-135268387.jpg" alt="Red Car">
+    </div>
+
+    <div id="RaceInfoCntnr" class="ClearFix">
+        <h2>Results</h2>
+        <div id="RaceInfo1" class="RaceInfo">Car 1 <span></span>
+        </div>
+        <div id="RaceInfo2" class="RaceInfo">Car 2 <span></span>
+        </div>
+    </div>
+
+    <!--Load CDN First-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--If CDN Fails to load, serve up the local version-->
+    <script>
+        window.jQuery || document.write('<script src="jQuery.js"><\/script>');
+    </script>
+</body>
+
+</html>

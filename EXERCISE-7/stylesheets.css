@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    text-align: center;
+}
+#RaceTrack {
+    background: url(https://img.freepik.com/premium-vector/top-view-race-car-track-with-start-finish-line-vector-kart-race-plan-grunge-textured-asphalt-road-track-with-start-finish-line-road-abstract-concept-graphic-element-art-design_499433-366.jpg?w=2000) center left repeat-x;
+    height: 330px;
+    border-right: dashed 10px white;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+.Car {
+    display: block;
+    position: relative;
+}
+#Car1 {
+    top: 20px;
+}
+#Car2 {
+    top: 150px;
+}
+#RaceInfoCntnr {
+    width: 80%;
+    margin: 40px auto 0;
+    background: #333;
+    height: 200px;
+}
+#RaceInfoCntnr h2 {
+    color: white;
+    text-transform: uppercase;
+    border-bottom: solid 1px white;
+    
+}
+.RaceInfo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+    float: left;
+}
+.RaceInfo span {
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+}
+#RaceInfo1 {
+    color: #77B82f;
+}
+#RaceInfo2 {
+    color: #B82F3E;
+}
+input[type="button"] {
+    background: #77b72f;
+    color: white;
+    padding: 10px 20px;
+    border: solid 1px #444;
+}
+input#Reset {
+    background: #fc3;
+    color: #444;
+}
+.ClearFix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
