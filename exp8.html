@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>;
+    <script>
+        var app=angular.module("myApp",[]);   //module
+        app.controller("control",function($scope){
+            $scope.add = function(){
+                var n1 = parseInt($scope.n1);
+                var n2 = parseInt($scope.n2);
+                var n3 = n2*0.01
+                var n4 = n1/(n3)**2
+                $scope.result = (n4);
+                
+                  
+
+            }
+             
+        });
+    </script>
+    <style>
+        div{
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        width: 50%;
+        float: left;
+        position: relative;
+        }
+    </style>
+    
+</head>
+<body ng-app="myApp" ng-controller="control">
+      <span style="background-color:blue; color:white;">
+      Body Mass Index(BMI)
+      </span><br>
+      <span style="background-color:blue; color:white;">
+      A Measure of Boby fat in adults
+      </span>
+      
+      </span><br>
+      <div>
+      Weight:<br>
+      <input type="text" ng-model="n1" ng-keyup="add()">kg<br><br>
+      Height:<br> 
+      <input type="text" ng-model="n2" ng-keyup="add()">cm<br>
+      
+      </div>
+      <div>
+          <div>{{result}}</div>
+      </div>
+      
+      
+      
+</body>
+</html>
